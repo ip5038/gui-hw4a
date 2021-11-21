@@ -1,0 +1,57 @@
+<!-- File: index.html  -->
+<!-- GUI Assignment: Create a multiplication table using the given input from user. -->
+<!-- Ishan Patel, Umass Lowell Computer Science, -->
+<!-- ishankumar_patel@student.uml.edu -->
+<!-- Copyright (c) 2021 by Ishan. All rights reserved. May be freely copied or excerpted for educational  -->
+<!-- purposes with credit to Ishan.  -->
+<!-- Updated on Nov 11, 2021 at 5:00pm -->
+<!--  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Boiler plate code -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="index.css">
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<title> Interactive Dynamic Table </title>
+</head>
+
+<body>
+	<h1 id="heading"> Interactive Dynamic Table </h1>
+
+	<!-- Input form for user to enter the 4 required numbers. Also create label on top of each input to specify the data required -->
+		<form id="form-input">
+			<div class="">
+				<label for="minColVal" id="input-text"> Enter minimum column value</label>
+				<input type="number" align="center" class="form-control " name="minColVal" id="minColVal" onkeydown="return event.keyCode !== 69" placeholder="Range: [-50, 50]"> 
+				<hr>
+				<label for="maxColVal" id="input-text"> Enter maximum column value</label>
+				<input type="number" class="form-control" name="maxColVal" id="maxColVal" onkeydown="return event.keyCode !== 69" placeholder="Range: [-50, 50]"> 
+				<hr>
+				<label for="minColVal" id="input-text"> Enter minimum row value</label>
+				<input type="number" class="form-control" name="minRowVal" id="minRowVal" onkeydown="return event.keyCode !== 69" placeholder="Range: [-50, 50]">
+				<hr>
+				<label for="minColVal" id="input-text"> Enter maximum row value</label>
+				<input type="number" class="form-control" name="maxRowVal" id="maxRowVal" onkeydown="return event.keyCode !== 69" placeholder="Range: [-50, 50]">
+				<hr>
+			</div>
+		</form>
+
+		<button id="submitButton" class ="btn-success" type="button" disabled value="plot" onclick="submitPressed();"> Calculate </button>
+		
+		<!-- Create a slider and put the table inside -->
+		<div class="slider-tab" id="scroller">
+			<table id="table-elm"> </table>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.1/jquery.validate.min.js"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.1/additional-methods.min.js"></script>
+	<script src="index.js"></script>
+</body>
+
+</html>
